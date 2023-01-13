@@ -1,6 +1,6 @@
 {
   "name": "@lczpln/ncli",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "A command-line interface utility that provides various methods for interacting with the terminal.",
   "type": "module",
   "types": "types/index.d.ts",

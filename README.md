@@ -46,28 +46,24 @@ Asynchronously prompts the user for input and returns the user's choice.
 ```js
 const ncli = new NCLI();
 
-let fruit;
-
-const setFruit = (input) => {
-  fruit = input;
-};
-
 const options = [
-  { title: "Apple", action: setFruit },
-  { title: "Banana", action: setFruit },
-  { title: "Orange", action: setFruit },
-  { title: "Watermelon", action: setFruit },
+  { title: "Apple", action: (input) => input },
+  { title: "Banana", action: (input) => input },
+  { title: "Orange", action: (input) => input },
+  { title: "Watermelon", action: (input) => input },
 ];
 
-await ncli.getUserInput({
-  title: "FOOD SELECTION",
-  subtitle: "Select your favority food",
+const fruitChosen = await ncli.getUserInput({
+  title: "FRUIT SELECTION",
+  subtitle: "Select your favority fruit",
   options,
 });
 
+const fruit = options[fruitChosen - 1].title;
+
 // > 2
 
-console.log(food); // Banana
+console.log(fruit); // Banana
 ```
 
 or

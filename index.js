@@ -94,6 +94,7 @@ class NCLI {
         preserveAspectRatio: true,
       })
     );
+    console.log();
   }
 
   async getUserInput({
@@ -115,7 +116,6 @@ class NCLI {
     this.#showTitle(title);
     if (subtitle) this.#showSubtitle(subtitle);
     if (image.path) await this.#showImage(image);
-    if (error) this.#showError();
 
     const rl = this._readline.createInterface({
       input: this._input,
@@ -126,7 +126,7 @@ class NCLI {
 
     if (!options) {
       choice = await new Promise((resolve) => {
-        if (!error) console.log();
+        if (error) this.#showError();
         rl.question(this._chalk[this._inputCharColor]("> "), resolve);
       });
     } else {
@@ -137,7 +137,7 @@ class NCLI {
       });
 
       choice = await new Promise((resolve) => {
-        if (!error) console.log();
+        if (error) this.#showError();
         rl.question(this._chalk[this._inputCharColor]("> "), resolve);
       });
 
