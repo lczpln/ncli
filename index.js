@@ -114,7 +114,7 @@ class NCLI {
     if (!noClear) this._clear();
     this.#showTitle(title);
     if (subtitle) this.#showSubtitle(subtitle);
-    if (image.path) this.#showImage(image);
+    if (image.path) await this.#showImage(image);
     if (error) this.#showError();
 
     const rl = this._readline.createInterface({
