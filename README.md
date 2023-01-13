@@ -5,13 +5,13 @@ A command-line interface utility that provides various methods for interacting w
 ## Install
 
 ```js
-yarn add ncli
+yarn add @lczpln/ncli
 ```
 
 or
 
 ```js
-npm install ncli --save
+npm install @lczpln/ncli --save
 ```
 
 ## Usage
@@ -19,7 +19,8 @@ npm install ncli --save
 Initializes the `NCLI` class and sets up the required dependencies.
 
 ```js
-const ncli = require("ncli");
+import ncli from "@lczpln/ncli";
+
 const ncli = new NCLI();
 ```
 
