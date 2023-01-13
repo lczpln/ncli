@@ -3,6 +3,7 @@ import { stdin as input, stdout as output } from "process";
 import terminalImage from "terminal-image";
 import clear from "clear";
 import chalk from "chalk";
+import Jimp from "jimp";
 
 class NCLI {
   constructor({
@@ -18,6 +19,7 @@ class NCLI {
     this._terminalImage = terminalImage;
     this._clear = clear;
     this._chalk = chalk;
+    this._Jimp = Jimp;
 
     this._titleColor = titleColor || "blue";
     this._subtitleColor = subtitleColor || "whiteBright";
