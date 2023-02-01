@@ -66,6 +66,8 @@ const fruit = options[fruitChosen - 1].title;
 console.log(fruit); // Banana
 ```
 
+![alt text](https://gcdnb.pbrd.co/images/f2ajslJhN6fp.png)
+
 or
 
 ```js
@@ -81,6 +83,8 @@ const name = await ncli.getUserInput({
 
 console.log("Hello " + name + "!"); // Hello World!
 ```
+
+![alt text](https://gcdnb.pbrd.co/images/1z9cfBguHuGy.png)
 
 #### Parameters
 

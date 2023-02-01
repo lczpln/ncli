@@ -1,5 +1,5 @@
 declare class NCLI {
-  constructor(options: {
+  constructor(options?: {
     titleColor?: string;
     subtitleColor?: string;
     msgColor?: string;
@@ -31,13 +31,16 @@ declare class NCLI {
     image?: {
       path: string;
       process?: boolean;
-      width?: number;
-      height?: number;
+      width?: number | string;
+      height?: number | string;
       preserveAspectRatio?: boolean;
     };
-    action: (input: string) => void;
+    action?: (input: string) => void;
     error?: boolean;
-    options?: string[];
+    options?: {
+      title: string;
+      action: () => string;
+    }[];
     noClear?: boolean;
   }): Promise<void>;
   log({
